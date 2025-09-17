@@ -1,2 +1,3 @@
 alias n="nvim"
 alias ll="ls -alh"
+alias vpn_kill="sudo pkill openvpn"
