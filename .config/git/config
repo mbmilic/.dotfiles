@@ -5,8 +5,11 @@
 	st = status
 [pull]
 	rebase = true
+[push]
+  autoSetupRemote = true
+
 [init]
-	defaultBranch = master
+  defaultBranch = master
 [user]
 	name = Marko Milic
 	email = mbmilic@gmail.com
