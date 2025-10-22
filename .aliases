@@ -7,3 +7,9 @@ alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
+###### hyprland monitors 
+
+alias monitor_clamshell_home='hyprctl keyword monitor "DP-1,3440x1440@59.99400,,1"'
+alias monitor_standalone_jogica='hyprctl keyword monitor "eDP-1,2880x1800@120hz,0x0,1.67"'
+alias monitor_standalone_disable='hyprctl keyword monitor "eDP-1, disable'
+
