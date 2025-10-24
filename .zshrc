@@ -10,6 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git history-substring-search zoxide fzf)
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
