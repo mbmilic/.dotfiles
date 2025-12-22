@@ -10,7 +10,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git history-substring-search zoxide fzf)
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
@@ -19,3 +18,7 @@ source ~/.aliases
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(ssh-agent -s)"
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# Created by `pipx` on 2025-10-27 10:34:45
+export PATH="$PATH:/home/ja/.local/bin"
