@@ -6,7 +6,8 @@ alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
-
+alias pbcopy='xclip -selection clipboard -i'
+alias pbpaste='xclip -selection clipboard -o'   
 ###### hyprland monitors 
 
 alias monitor_clamshell_home='hyprctl keyword monitor "DP-1,3840x1600@59.99400,,1"'
