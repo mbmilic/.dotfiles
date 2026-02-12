@@ -21,3 +21,9 @@ bindings = [
 { key = "Insert", mods = "Shift", action = "Paste" },
 { key = "Insert", mods = "Control", action = "Copy" }
 ]
+
+[mouse]
+bindings = [
+{ mouse = 4, mods = "Control", action = "IncreaseFontSize" },
+{ mouse = 5, mods = "Control", action = "DecreaseFontSize" }
+]
