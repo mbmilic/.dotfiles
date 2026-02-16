@@ -15,4 +15,4 @@ alias monitor_clamshell_work='hyprctl keyword monitor "DP-1,3440x1440@60,auto-up
 alias monitor_standalone_jogica='hyprctl keyword monitor "eDP-1,2880x1800@120hz,0x0,1.67"'
 alias monitor_standalone_disable='hyprctl keyword monitor "eDP-1, disable"'
 alias monitor_coworking_dual='hyprctl keyword monitor "DP-1,3840x2160@60,auto-up,1"'
-alias monitor_coworking_clamshell='hyprctl keyword monitor "DP-1,3840x2160@60,,1"'
+alias monitor_coworking_clamshell='hyprctl keyword monitor "DP-1,3840x2160@60,,1.25"'
