@@ -11,6 +11,21 @@
   font-size: 18px;
 }
 
+window#waybar,
+window#waybar > box {
+  background-color: transparent;
+  border: none;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: @background;
+  border-radius: 14px;
+  margin: 4px 4px;
+  padding: 0 6px;
+}
+
 .modules-left {
   margin-left: 8px;
 }
@@ -31,29 +46,40 @@
 }
 
 #cpu,
+#temperature,
+#memory,
+#disk,
 #battery,
 #pulseaudio,
+#clock,
 #custom-omarchy,
 #custom-screenrecording-indicator,
 #custom-update {
   min-width: 12px;
-  margin: 0 7.5px;
+  margin: 0 6px;
 }
 
 #tray {
-  margin-right: 16px;
+  margin-right: 6px;
 }
 
 #bluetooth {
-  margin-right: 17px;
+  margin: 0 6px;
 }
 
 #network {
-  margin-right: 13px;
+  margin: 0 6px;
 }
 
 #custom-expand-icon {
-  margin-right: 18px;
+  margin-right: 6px;
+}
+
+#custom-sep {
+  color: @foreground;
+  opacity: 0.25;
+  margin: 0;
+  font-size: 14px;
 }
 
 tooltip {
@@ -62,10 +88,6 @@ tooltip {
 
 #custom-update {
   font-size: 10px;
-}
-
-#clock {
-  margin-left: 5px;
 }
 
 .hidden {
@@ -80,6 +102,10 @@ tooltip {
 }
 
 #custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#temperature.critical {
   color: #a55555;
 }
 

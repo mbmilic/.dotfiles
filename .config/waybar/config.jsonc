@@ -3,15 +3,20 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 26,
-  "modules-left": ["custom/omarchy", "hyprland/workspaces","cpu"],
-  "modules-center": ["clock", "custom/update"],
+  "height": 34,
+  "modules-left": ["custom/omarchy", "hyprland/workspaces", "custom/sep", "network"],
+  "modules-center": ["memory", "custom/sep", "clock", "custom/sep", "disk", "custom/update"],
   "modules-right": [
     "group/tray-expander",
-    "bluetooth",
-    "network",
-    "pulseaudio",
+    "custom/sep",
+    "temperature",
+    "custom/sep",
     "cpu",
+    "custom/sep",
+    "pulseaudio",
+    "custom/sep",
+    "bluetooth",
+    "custom/sep",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -39,12 +44,14 @@
       "5": []
     }
   },
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false
+  },
   "custom/omarchy": {
     "format": "<span font='omarchy'>\ue900</span>",
     "on-click": "omarchy-menu",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
-  },
-  "cpu": {"format": "\uf2db {usage}%"
   },
   "custom/update": {
     "format": "",
@@ -56,26 +63,53 @@
   },
 
   "cpu": {
-    "interval": 5,
-    "format": "󰍛",
+    "interval": 2,
+    "format": "󰍛 {usage}%",
     "on-click": "alacritty -e btop"
   },
-  "clock": {
-    "format": "{:%A %H:%M}",
-    "format-alt": "{:%d %B W%V %Y}",
+  "custom/clock": {
+    "exec": "T=$(date '+%A %H:%M:%S.%N'); echo ${T:0:-8}",
+    "interval": 0.1,
+    "format": "{}",
     "tooltip": false,
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
+    "format-alt": "{:%A %d %B W%V %Y}",
+    "tooltip": false,
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
+    "interval": 5,
+    "format": " {temperatureC}°C",
+    "critical-threshold": 85,
+    "format-critical": " {temperatureC}°C",
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 5,
+    "format": "󰘚 {used:0.1f}G/{total:0.0f}G ({percentage}%)",
+    "tooltip": false
+  },
+  "disk": {
+    "interval": 30,
+    "format": "󰋊 {free} ({percentage_free}%)",
+    "path": "/",
+    "tooltip-format": "{used} used · {free} free of {total}"
+  },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "format": "{icon}",
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰀂",
+    "format": "󰖪",
+    "format-wifi": "{icon} ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
+    "format-ethernet": "󰀂 ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
     "format-disconnected": "󰖪",
-    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)",
+    "tooltip-format-ethernet": "{ifname}",
     "tooltip-format-disconnected": "Disconnected",
-    "interval": 3,
+    "interval": 2,
     "spacing": 1,
     "on-click": "alacritty --class=Impala -e impala"
   },
