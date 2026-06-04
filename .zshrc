@@ -22,3 +22,10 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Created by `pipx` on 2025-10-27 10:34:45
 export PATH="$PATH:/home/ja/.local/bin"
+
+# bun completions
+[ -s "/home/ja/.bun/_bun" ] && source "/home/ja/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
