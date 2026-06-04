@@ -9,7 +9,7 @@
   "modules-right": [
     "group/tray-expander",
     "custom/sep",
-    "temperature",
+    "custom/temperature",
     "custom/sep",
     "cpu",
     "custom/sep",
@@ -81,12 +81,10 @@
     "tooltip": false,
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
-  "temperature": {
-    "thermal-zone": 9,
+  "custom/temperature": {
+    "exec": "~/.config/waybar/scripts/cpu_temp.sh",
+    "return-type": "json",
     "interval": 5,
-    "format": " {temperatureC}°C",
-    "critical-threshold": 85,
-    "format-critical": " {temperatureC}°C",
     "tooltip": false
   },
   "memory": {

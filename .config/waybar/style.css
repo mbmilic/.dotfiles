@@ -109,7 +109,8 @@ tooltip {
   color: #a55555;
 }
 
-#temperature.critical {
+#temperature.critical,
+#custom-temperature.critical {
   color: #a55555;
 }
 
