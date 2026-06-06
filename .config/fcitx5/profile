@@ -2,17 +2,23 @@
 # Group Name
 Name=Default
 # Layout
-Default Layout=us
+Default Layout=us-hbs
 # Default Input Method
 DefaultIM=keyboard-hr
 
 [Groups/0/Items/0]
 # Name
-Name=keyboard-us
+Name=keyboard-us-hbs
 # Layout
 Layout=
 
 [Groups/0/Items/1]
+# Name
+Name=keyboard-us
+# Layout
+Layout=
+
+[Groups/0/Items/2]
 # Name
 Name=keyboard-hr
 # Layout
