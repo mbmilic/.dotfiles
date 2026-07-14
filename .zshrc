@@ -29,3 +29,6 @@ export PATH="$PATH:/home/ja/.local/bin"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# opencode
+export PATH=/home/ja/.opencode/bin:$PATH
