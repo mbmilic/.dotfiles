@@ -26,5 +26,5 @@ if [ "$ACTION" = "close" ]; then
 
 elif [ "$ACTION" = "open" ]; then
     # Re-enable internal display
-    hyprctl keyword monitor "eDP-1,preferred,0x0,auto"
+    hyprctl keyword monitor "eDP-1,1920x1080@60hz,0x0,1"
 fi
