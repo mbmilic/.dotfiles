@@ -31,6 +31,17 @@ hl.unbind("switch:off:Lid Switch")
 o.bind("switch:on:Lid Switch", nil, "~/.config/hypr/scripts/lid-switch.sh close", { locked = true })
 o.bind("switch:off:Lid Switch", nil, "~/.config/hypr/scripts/lid-switch.sh open", { locked = true })
 
+-- Force Brave for the browser keys (default browser is chromium via xdg-settings)
+hl.unbind("SUPER + SHIFT + B")
+o.bind("SUPER + SHIFT + B", "Browser", { launch = "brave" })
+
+hl.unbind("SUPER + SHIFT + ALT + B")
+o.bind("SUPER + SHIFT + ALT + B", "Browser (private)", { launch = "brave --incognito" })
+
+-- ChatGPT opened directly in Brave (default binding opens app-mode in whatever xdg default browser is)
+hl.unbind("SUPER + SHIFT + A")
+o.bind("SUPER + SHIFT + A", "ChatGPT", { launch = "brave https://chatgpt.com" })
+
 -- Web apps
 -- o.bind("SUPER + SHIFT + A", "ChatGPT", { webapp = "https://chatgpt.com" })
 -- o.bind("SUPER + SHIFT + ALT + A", "Grok", { webapp = "https://grok.com" })
