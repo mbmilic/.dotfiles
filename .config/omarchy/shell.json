@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "idle": {
+    "screensaver": 150,
+    "lock": 300
+  },
+  "bar": {
+    "position": "top",
+    "transparent": false,
+    "centerAnchor": "omarchy.clock",
+    "layout": {
+      "left": [
+        {
+          "id": "omarchy.menu"
+        },
+        {
+          "id": "omarchy.workspaces"
+        },
+        {
+          "id": "network-throughput",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/network-throughput.sh",
+          "interval": 2,
+          "fontSize": 18
+        }
+      ],
+      "center": [
+        {
+          "id": "omarchy.indicators"
+        },
+        {
+          "id": "memory",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/memory-usage.sh",
+          "interval": 5,
+          "fontSize": 18
+        },
+        {
+          "id": "omarchy.clock",
+          "format": "dddd HH:mm",
+          "formatAlt": "d MMMM 'W'ww yyyy",
+          "verticalFormat": "HH\n—\nmm"
+        },
+        {
+          "id": "disk",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/disk-free.sh",
+          "interval": 30,
+          "fontSize": 18
+        },
+        {
+          "id": "omarchy.keyboard-layout"
+        },
+        {
+          "id": "omarchy.weather"
+        },
+        {
+          "id": "omarchy.system-update"
+        }
+      ],
+      "right": [
+        {
+          "id": "omarchy.tray"
+        },
+        {
+          "id": "cpu-temp",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/cpu-temp.sh",
+          "interval": 5,
+          "fontSize": 18
+        },
+        {
+          "id": "cpu",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/cpu-usage.sh",
+          "interval": 2,
+          "fontSize": 18
+        },
+        {
+          "id": "omarchy.agents"
+        },
+        {
+          "id": "omarchy.bluetooth"
+        },
+        {
+          "id": "omarchy.network"
+        },
+        {
+          "id": "omarchy.audio"
+        },
+        {
+          "id": "omarchy.monitor"
+        },
+        {
+          "id": "omarchy.power"
+        }
+      ]
+    }
+  },
+  "plugins": []
+}
