@@ -1,52 +1,30 @@
 {
-  "version": 1,
-  "idle": {
-    "screensaver": 150,
-    "lock": 300
-  },
   "bar": {
-    "position": "top",
-    "transparent": false,
     "centerAnchor": "omarchy.clock",
     "layout": {
-      "left": [
-        {
-          "id": "omarchy.menu"
-        },
-        {
-          "id": "omarchy.workspaces"
-        },
-        {
-          "id": "network-throughput",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/network-throughput.sh",
-          "interval": 2,
-          "fontSize": 18
-        }
-      ],
       "center": [
         {
           "id": "omarchy.indicators"
         },
         {
-          "id": "memory",
-          "type": "command",
           "exec": "~/.config/omarchy/bar/scripts/memory-usage.sh",
+          "fontSize": 18,
+          "id": "memory",
           "interval": 5,
-          "fontSize": 18
+          "type": "command"
         },
         {
-          "id": "omarchy.clock",
           "format": "dddd HH:mm",
           "formatAlt": "d MMMM 'W'ww yyyy",
+          "id": "omarchy.clock",
           "verticalFormat": "HH\n—\nmm"
         },
         {
-          "id": "disk",
-          "type": "command",
           "exec": "~/.config/omarchy/bar/scripts/disk-free.sh",
+          "fontSize": 18,
+          "id": "disk",
           "interval": 30,
-          "fontSize": 18
+          "type": "command"
         },
         {
           "id": "omarchy.keyboard-layout"
@@ -58,23 +36,38 @@
           "id": "omarchy.system-update"
         }
       ],
+      "left": [
+        {
+          "id": "omarchy.menu"
+        },
+        {
+          "id": "omarchy.workspaces"
+        },
+        {
+          "exec": "~/.config/omarchy/bar/scripts/network-throughput.sh",
+          "fontSize": 18,
+          "id": "network-throughput",
+          "interval": 2,
+          "type": "command"
+        }
+      ],
       "right": [
         {
           "id": "omarchy.tray"
         },
         {
-          "id": "cpu-temp",
-          "type": "command",
           "exec": "~/.config/omarchy/bar/scripts/cpu-temp.sh",
+          "fontSize": 18,
+          "id": "cpu-temp",
           "interval": 5,
-          "fontSize": 18
+          "type": "command"
         },
         {
-          "id": "cpu",
-          "type": "command",
           "exec": "~/.config/omarchy/bar/scripts/cpu-usage.sh",
+          "fontSize": 18,
+          "id": "cpu",
           "interval": 2,
-          "fontSize": 18
+          "type": "command"
         },
         {
           "id": "omarchy.agents"
@@ -95,7 +88,15 @@
           "id": "omarchy.power"
         }
       ]
-    }
+    },
+    "position": "top",
+    "transparent": true,
+    "id": "ja.bar"
   },
-  "plugins": []
+  "idle": {
+    "lock": 300,
+    "screensaver": 150
+  },
+  "plugins": [],
+  "version": 1
 }
