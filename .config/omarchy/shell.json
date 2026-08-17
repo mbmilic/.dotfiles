@@ -67,6 +67,7 @@
           "fontSize": 18,
           "id": "cpu",
           "interval": 2,
+          "onClick": "omarchy-launch-or-focus-tui btop",
           "type": "command"
         },
         {
@@ -97,6 +98,16 @@
     "lock": 300,
     "screensaver": 150
   },
-  "plugins": [],
-  "version": 1
+  "plugins": [
+    {
+      "id": "ja.lock"
+    }
+  ],
+  "version": 1,
+  "disabledPlugins": [
+    "omarchy.lock"
+  ],
+  "cloneSourceRestores": [
+    "ja.lock"
+  ]
 }
