@@ -8,20 +8,20 @@
         },
         {
           "exec": "~/.config/omarchy/bar/scripts/memory-usage.sh",
-          "fontSize": 18,
+          "fontSize": 17,
           "id": "memory",
           "interval": 5,
           "type": "command"
         },
         {
-          "format": "dddd HH:mm",
-          "formatAlt": "d MMMM 'W'ww yyyy",
           "id": "omarchy.clock",
+          "format": "ddd d MMM HH:mm",
+          "formatAlt": "d MMMM 'W'ww yyyy",
           "verticalFormat": "HH\n—\nmm"
         },
         {
           "exec": "~/.config/omarchy/bar/scripts/disk-free.sh",
-          "fontSize": 18,
+          "fontSize": 17,
           "id": "disk",
           "interval": 30,
           "type": "command"
@@ -45,7 +45,7 @@
         },
         {
           "exec": "~/.config/omarchy/bar/scripts/network-throughput.sh",
-          "fontSize": 18,
+          "fontSize": 17,
           "id": "network-throughput",
           "interval": 2,
           "type": "command"
@@ -57,14 +57,14 @@
         },
         {
           "exec": "~/.config/omarchy/bar/scripts/cpu-temp.sh",
-          "fontSize": 18,
+          "fontSize": 17,
           "id": "cpu-temp",
           "interval": 5,
           "type": "command"
         },
         {
           "exec": "~/.config/omarchy/bar/scripts/cpu-usage.sh",
-          "fontSize": 18,
+          "fontSize": 17,
           "id": "cpu",
           "interval": 2,
           "onClick": "omarchy-launch-or-focus-tui btop",
@@ -91,8 +91,7 @@
       ]
     },
     "position": "top",
-    "transparent": true,
-    "id": "ja.bar"
+    "transparent": false
   },
   "idle": {
     "lock": 300,
