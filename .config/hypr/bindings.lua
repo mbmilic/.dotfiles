@@ -3,7 +3,7 @@
 
 -- Tmux in current terminal's working directory (default opens without cwd awareness)
 hl.unbind("SUPER + ALT + RETURN")
-o.bind("SUPER + ALT + RETURN", "Tmux", "uwsm-app -- xdg-terminal-exec --dir=\"$(omarchy-cmd-terminal-cwd)\" tmux new")
+o.bind("SUPER + ALT + RETURN", "Tmux", 'uwsm-app -- xdg-terminal-exec --dir="$(omarchy-cmd-terminal-cwd)" tmux new')
 
 -- File manager on SUPER+SHIFT+E (default is now Email in Quattro)
 hl.unbind("SUPER + SHIFT + E")
@@ -33,7 +33,11 @@ o.bind("switch:off:Lid Switch", nil, "~/.config/hypr/scripts/lid-switch.sh open"
 
 -- Force Brave for the browser keys (default browser is chromium via xdg-settings)
 hl.unbind("SUPER + SHIFT + B")
-o.bind("SUPER + SHIFT + B", "Browser", { launch = "brave" })
+o.bind(
+	"SUPER + SHIFT + B",
+	"Browser",
+	{ launch = "brave --enable-features=UseOzonePlatform --ozone-platform=wayland --force-device-scale-factor=1" }
+)
 
 hl.unbind("SUPER + SHIFT + ALT + B")
 o.bind("SUPER + SHIFT + ALT + B", "Browser (private)", { launch = "brave --incognito" })
