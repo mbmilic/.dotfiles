@@ -10,12 +10,12 @@ alias pbcopy='xclip -selection clipboard -i'
 alias pbpaste='xclip -selection clipboard -o'   
 ###### hyprland monitors 
 
-alias monitor_clamshell_home='hyprctl keyword monitor "DP-1,3840x1600@59.99400,,1"'
-alias monitor_clamshell_work='hyprctl keyword monitor "DP-1,3440x1440@60,auto-up,1.25"'
-alias monitor_standalone_lepolovo='hyprctl keyword monitor "eDP-1,2880x1920@120hz,0x0,1.6"'
-alias monitor_standalone_disable='hyprctl keyword monitor "eDP-1, disable"'
-alias monitor_coworking_dual='hyprctl keyword monitor "DP-1,3840x2160@60,auto-up,1"'
-alias monitor_coworking_clamshell='hyprctl keyword monitor "DP-1,3840x2160@60,,1.25"'
+alias monitor_clamshell_home='hyprctl eval '\''hl.monitor({ output = "DP-1", mode = "3840x1600@59.99400", position = "auto", scale = 1 })'\'''
+alias monitor_clamshell_work='hyprctl eval '\''hl.monitor({ output = "DP-1", mode = "3440x1440@60", position = "auto-up", scale = 1.25 })'\'''
+alias monitor_standalone_lepolovo='hyprctl eval '\''hl.monitor({ output = "eDP-1", mode = "2880x1920@120", position = "0x0", scale = 1.6 })'\'' && omarchy display text size 16'
+alias monitor_standalone_disable='hyprctl eval '\''hl.monitor({ output = "eDP-1", disabled = true })'\'''
+alias monitor_coworking_dual='hyprctl eval '\''hl.monitor({ output = "DP-1", mode = "3840x2160@60", position = "auto-up", scale = 1 })'\'''
+alias monitor_coworking_clamshell='hyprctl eval '\''hl.monitor({ output = "DP-1", mode = "3840x2160@60", position = "auto", scale = 1.25 })'\'''
 
 ######Renovatio#####
 alias renovatio_aws_login='aws sts get-caller-identity --profile AdministratorAccess-631571736884'
