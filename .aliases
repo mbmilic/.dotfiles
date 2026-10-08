@@ -19,3 +19,7 @@ alias monitor_coworking_clamshell='hyprctl eval '\''hl.monitor({ output = "DP-1"
 
 ######Renovatio#####
 alias renovatio_aws_login='aws sts get-caller-identity --profile AdministratorAccess-631571736884'
+
+######Entrio 
+alias claude-entrio='CLAUDE_CONFIG_DIR=~/.claude-entrio claude'
+alias claude-sevenm='CLAUDE_CONFIG_DIR=~/.claude claude'
