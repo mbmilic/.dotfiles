@@ -1,3 +1,4 @@
+alias o="xdg-open"
 alias n="nvim"
 alias vpn_kill="sudo pkill openvpn"
 alias ll="ls -alh"

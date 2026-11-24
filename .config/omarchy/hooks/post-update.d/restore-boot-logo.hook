@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# omarchy-plymouth-set writes into /usr/share/plymouth/themes/omarchy, which the
+# omarchy-settings package owns, so every package upgrade puts the stock logo
+# back. Re-apply ours, but only when it has actually been replaced, since each
+# apply rebuilds the initramfs.
+
+set -e
+
+logo="$HOME/.dotfiles/.config/omarchy/branding/boot-logo.png"
+installed=/usr/share/plymouth/themes/omarchy/logo.png
+
+[[ -f $logo ]] || exit 0
+cmp -s "$logo" "$installed" && exit 0
+
+echo "Restoring custom boot logo"
+omarchy-plymouth-set '#111c18' '#C1C497' "$logo"
